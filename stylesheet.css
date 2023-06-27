@@ -1,0 +1,160 @@
+aside { 
+	font-size: 11px; 
+	text-align: center; 
+	position: absolute;
+	bottom: 5%;
+	left: 0%;
+	padding: 2px;
+	background-color: white;
+	color: black;
+}
+
+aside .attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+html {
+	font-size: 16px;
+}
+
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+}
+
+/*Starting The Project*/
+body {
+	background-color: var(--pale-blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Red Hat Display", sans-serif;
+	background-image: url("images/pattern-background-desktop.svg");
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+main {
+	background-color: #fff;
+    width: 30%;
+    height: fit-content;
+    min-width: 300px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+main picture img {
+	border-radius: 15px 15px 0px 0px;
+}
+
+main div.text-div {
+	padding: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main div.text-div h1 {
+	margin-bottom: 3%;
+	color: hsl(223, 47%, 23%);
+	font-weight: 900;
+}
+
+main div.text-div p {
+	margin-bottom: 3%;
+	color: hsl(224, 23%, 55%);
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+main div.text-div div.plan-div {
+	margin-bottom: 5%;
+	padding: 20px 0px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: hsl(225, 100%, 98%);
+	border-radius: 10px;
+}
+
+main div.text-div div.plan-div div.price-div {
+	display: grid;
+	grid-template: auto auto / auto auto;
+	grid-gap: 3px 10px;
+	margin-left: 20px;
+}
+
+main div.text-div div.plan-div div.price-div img {
+	grid-area: 1 / 1 / 3 / 2;
+	align-self: stretch;
+}
+
+main div.text-div div.plan-div div.price-div span:nth-child(2) {
+	font-weight: 700;
+	color: hsl(223, 47%, 23%);
+}
+
+main div.text-div div.plan-div div.price-div span:nth-child(3) {
+	color: hsl(224, 23%, 55%);
+}
+
+main div.text-div div.plan-div > a {
+	margin-right: 20px;
+	color: var(--bright-blue);
+	font-weight: 700;
+}
+
+main div.text-div div.plan-div > a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+
+}
+
+main div.text-div button {
+	width: 100%;
+	border-radius: 10px;
+	border: none;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	transition: 0.5s ease all;
+
+}
+
+main div.text-div button.payment-button {
+	margin-bottom: 3%;
+	background-color: var(--bright-blue);
+	color: #fff;
+	cursor: pointer;
+}
+
+main div.text-div button.payment-button:hover {
+	opacity: 0.8;
+}
+
+main div.text-div button.cancel-button {
+	color: hsl(224, 23%, 55%);
+	background-color: transparent;
+	cursor: pointer;
+}
+
+main div.text-div button.cancel-button:hover {
+	color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 375px) {
+	body {
+		background-image: url("images/pattern-background-mobile.svg");
+	}
+
+	main div.text-div div.plan-div > a {
+		margin: 0px;
+	}
+
+	main div.text-div div.plan-div div.price-div {
+		margin: 0px;
+	}
+}
